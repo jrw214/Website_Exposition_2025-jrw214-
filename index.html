@@ -76,14 +76,48 @@
         .btn:hover { opacity: 0.9; }
         .btn:hover { opacity: 0.9; }
 
-        .viewer-frame {
-            width: 100%;
-            height: 350px; /* Shorter height to reduce black bars */
-            border: none;
-            border-radius: 8px;
-            background-color: #f0f0f0; /* Light gray background while loading */
-            margin-top: 15px;
+        .presentation-viewer {
+            margin-bottom: 40px;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            overflow: hidden; /* Stops overlaps */
         }
+        .presentation-header {
+            background: #f1f5f9;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .presentation-header h3 { margin: 0; }
+        
+        /* Responsive 16:9 Aspect Ratio Box for Iframes */
+        .responsive-iframe-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Ratio */
+            height: 0;
+            background-color: #000; /* Black background blends better with PPT controls */
+        }
+        .responsive-iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.9rem;
+        }
+        .btn:hover { opacity: 0.9; }
     </style>
 </head>
 <body>
@@ -103,16 +137,26 @@
                 <h3>Josephs Expo Temp</h3>
                 <!-- Replace '#' with actual file path, e.g., 'files/strategy.pptx' -->
                 <a href="files/Josephs.pptx" class="btn" download>Download PPT</a>
-                <div class="viewer-frame">
-                    <iframe src='https://view.officeapps.live.com/op/embed.aspx?src=https://jrw214.github.io/Website_Exposition_2025-jrw214-/files/Josephs.pptx' frameborder='0' allowfullscreen></iframe>
+                <div class="responsive-iframe-container">
+                    <iframe 
+                        src='https://view.officeapps.live.com/op/embed.aspx?src=https://jrw214.github.io/Website_Exposition_2025-jrw214-/files/Josephs.pptx'' 
+                        allowfullscreen="true" 
+                        webkitallowfullscreen="true" 
+                        mozallowfullscreen="true">
+                    </iframe>
                 </div>
             </div>
             <!-- File Item 2 -->
             <div class="file-card">
                 <h3>Prof Coombs Expo Temp</h3>
                 <a href="files/Prof Coombs.pptx" class="btn" download>Download PPT</a>
-                <div class="viewer-frame">
-                    <iframe src='https://view.officeapps.live.com/op/embed.aspx?src=https://jrw214.github.io/Website_Exposition_2025-jrw214-/files/Prof%20Coombs.pptx' frameborder='0' allowfullscreen></iframe>
+                <div class="responsive-iframe-container">
+                    <iframe 
+                        src='https://view.officeapps.live.com/op/embed.aspx?src=https://jrw214.github.io/Website_Exposition_2025-jrw214-/files/Prof%20Coombs.pptx' 
+                        allowfullscreen="true" 
+                        webkitallowfullscreen="true" 
+                        mozallowfullscreen="true">
+                    </iframe>
                 </div>
             </div>
             <!-- File Item 3 -->
