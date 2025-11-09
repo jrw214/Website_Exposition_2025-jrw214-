@@ -1,19 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- Simple html formatting -->
-<script>
-  const cacheVersion = "v3"; // increase manually each deployment <!-- stops issues with old cached files -->
 
-  document.querySelectorAll("iframe, a").forEach(el => {
-    ["src", "href"].forEach(attr => {
-      const url = el.getAttribute(attr);
-      if (url && url.includes("files/") && url.includes(".pptx")) {
-        const separator = url.includes("?") ? "&" : "?";
-        el.setAttribute(attr, `${url}${separator}${cacheVersion}`);
-      }
-    });
-  });
-</script>
 
 <head>
     <meta charset="UTF-8">
@@ -122,6 +110,21 @@
         }
     </style>
 </head>
+
+<script>
+  const cacheVersion = "v3"; // increase manually each deployment <!-- stops issues with old cached files -->
+
+  document.querySelectorAll("iframe, a").forEach(el => {
+    ["src", "href"].forEach(attr => {
+      const url = el.getAttribute(attr);
+      if (url && url.includes("files/") && url.includes(".pptx")) {
+        const separator = url.includes("?") ? "&" : "?";
+        el.setAttribute(attr, `${url}${separator}${cacheVersion}`);
+      }
+    });
+  });
+</script>
+
 <body>
                 <!-- Replace '#' with actual file path, e.g., 'files/strategy.pptx' -->
     <div class="container">
