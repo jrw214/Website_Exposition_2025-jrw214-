@@ -1,0 +1,9 @@
+Abstract:
+This presentation outlines the development of “The Exposition Archive” a static web repository for digital assets such as PowerPoints. I will cover the initial implementation of decentralised file storage, the technical architecture used to create it (specifically Git and HTML5), and demonstrate the final deployed application. The goal is to show how accessible modern web design can be.
+
+
+
+
+Slide 5 words: Semantic HTML5 structure means you use clear labelling throughout the website so its clear where everything is. It is also important for people using screen readers as it helps them understand layout better.
+My initial file design was built up locally on my computer as was my code. I then pushed all my work to GitHub where it is saved and recorded different versions throughout my time coding it which meant I could backtrack if needed.
+I then utilised GitHub pages which hosted my website once it was built (for free) Static website means there is no processing and no data base everyone sees the same thing. The archive system I built is not a database but a static repository/file system
