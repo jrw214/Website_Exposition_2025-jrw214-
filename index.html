@@ -116,6 +116,19 @@
             width: 100%;
             height: 100%;
         }
+        .image-gallery {
+            display: flex; /* Use flex to put them side-by-side */
+            gap: 10px;     /* This now works! */
+            margin-top: 15px;
+            flex-wrap: wrap; /* Lets images wrap to next line on small screens */
+        }
+
+        .gallery-image {
+            max-width: 150px; /* <--- THIS CONTROLS THE IMAGE SIZE */
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgb(0 0 0 / 0.1);
+        }
     </style>
 </head>
 
@@ -290,10 +303,10 @@
         <!-- SECTION 3: IMAGES [OPTIONAL]-->
         <h2 class="section-title">🖼️ Image Gallery</h2>
         <p>You can also easily display standard images:</p>
-        <div style="display: flex; gap: 10px; margin-top: 15px;">
+        <div class="image-gallery">
             <!-- Placeholder images - replace src with your actual images in an 'images/' folder -->
-            <img src="images/Magdalene_college_shield.svg.png" alt="Magdalene_college_shield" style="border-radius: 8px;">
-            <img src="images/Screenshot_2025_html_code.png" alt="Screenshot of html code" style="border-radius: 8px;">
+            <img src="images/Magdalene_college_shield.svg.png" alt="Magdalene_college_shield" class="gallery-image">
+            <img src="images/Screenshot_2025_html_code.png" alt="Screenshot of html code" class="gallery-image">
         </div>
 
     </div>
